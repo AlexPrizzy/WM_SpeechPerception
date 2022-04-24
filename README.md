@@ -1,5 +1,5 @@
 # replication-materials-AlexPrizzy
-
+[![DOI](https://zenodo.org/badge/482913163.svg)](https://zenodo.org/badge/latestdoi/482913163)
 
 ## Initial Findings
 
