@@ -1,0 +1,373 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "7749098f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "/Users/alexprzybycin/Documents/UChicago/APEX Lab/WMTraining Study/Data/P2_NA\n"
+     ]
+    }
+   ],
+   "source": [
+    "cd /Users/alexprzybycin/Documents/UChicago/APEX Lab/WMTraining Study/Data/P2_NA"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "b1183c6a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "data_N-Back_PARTICIPANT_SESSION_2022-03-11_16h48.13.747.csv\r\n",
+      "data_RSynth_PARTICIPANT_SESSION_2022-03-11_17h59.09.401.csv\r\n"
+     ]
+    }
+   ],
+   "source": [
+    "ls"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "ace19516",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "b6944751",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "data = 'data_RSynth_PARTICIPANT_SESSION_2022-03-11_17h59.09.401.csv'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "fbd7ce83",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'data_RSynth_PARTICIPANT_SESSION_2022-03-11_17h59.09.401.csv'"
+      ]
+     },
+     "execution_count": 25,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "data"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "0977d2c9",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df = pd.read_csv(data)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "88ab3c90",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>trial_type</th>\n",
+       "      <th>trial_index</th>\n",
+       "      <th>time_elapsed</th>\n",
+       "      <th>internal_node_id</th>\n",
+       "      <th>subject</th>\n",
+       "      <th>rt</th>\n",
+       "      <th>stimulus</th>\n",
+       "      <th>key_press</th>\n",
+       "      <th>responses</th>\n",
+       "      <th>word</th>\n",
+       "      <th>answer</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>pavlovia</td>\n",
+       "      <td>0</td>\n",
+       "      <td>6</td>\n",
+       "      <td>0.0-0.0</td>\n",
+       "      <td>bzb5hmc2ggk</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>html-keyboard-response</td>\n",
+       "      <td>1</td>\n",
+       "      <td>17039</td>\n",
+       "      <td>0.0-1.0</td>\n",
+       "      <td>bzb5hmc2ggk</td>\n",
+       "      <td>17029.6</td>\n",
+       "      <td>&lt;p&gt;Welcome to the experiment. In the first par...</td>\n",
+       "      <td>32.0</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>html-keyboard-response</td>\n",
+       "      <td>2</td>\n",
+       "      <td>35508</td>\n",
+       "      <td>0.0-2.0</td>\n",
+       "      <td>bzb5hmc2ggk</td>\n",
+       "      <td>17952.0</td>\n",
+       "      <td>&lt;p&gt;It is crucial that you pay attention to eac...</td>\n",
+       "      <td>32.0</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>html-keyboard-response</td>\n",
+       "      <td>3</td>\n",
+       "      <td>52132</td>\n",
+       "      <td>0.0-3.0</td>\n",
+       "      <td>bzb5hmc2ggk</td>\n",
+       "      <td>16111.8</td>\n",
+       "      <td>&lt;p&gt;You will need to listen carefully to each w...</td>\n",
+       "      <td>32.0</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>html-keyboard-response</td>\n",
+       "      <td>4</td>\n",
+       "      <td>54163</td>\n",
+       "      <td>0.0-4.0</td>\n",
+       "      <td>bzb5hmc2ggk</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>&lt;div id=\"countdown\"&gt;***&lt;/div&gt;</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>...</th>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2106</th>\n",
+       "      <td>audio-keyboard-response</td>\n",
+       "      <td>2106</td>\n",
+       "      <td>4194953</td>\n",
+       "      <td>0.0-2106.0</td>\n",
+       "      <td>bzb5hmc2ggk</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>perceptual_learning_stimuli/t2/r_team.wav</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2107</th>\n",
+       "      <td>survey-text</td>\n",
+       "      <td>2107</td>\n",
+       "      <td>4196791</td>\n",
+       "      <td>0.0-2107.0</td>\n",
+       "      <td>bzb5hmc2ggk</td>\n",
+       "      <td>1834.0</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>{\"Q0\":\"team\"}</td>\n",
+       "      <td>team</td>\n",
+       "      <td>team</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2108</th>\n",
+       "      <td>html-keyboard-response</td>\n",
+       "      <td>2108</td>\n",
+       "      <td>4199312</td>\n",
+       "      <td>0.0-2108.0</td>\n",
+       "      <td>bzb5hmc2ggk</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>&lt;div id=\"countdown\"&gt;***&lt;/div&gt;</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2109</th>\n",
+       "      <td>audio-keyboard-response</td>\n",
+       "      <td>2109</td>\n",
+       "      <td>4199623</td>\n",
+       "      <td>0.0-2109.0</td>\n",
+       "      <td>bzb5hmc2ggk</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>perceptual_learning_stimuli/t2/r_shin.wav</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2110</th>\n",
+       "      <td>survey-text</td>\n",
+       "      <td>2110</td>\n",
+       "      <td>4201766</td>\n",
+       "      <td>0.0-2110.0</td>\n",
+       "      <td>bzb5hmc2ggk</td>\n",
+       "      <td>2139.8</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>{\"Q0\":\"chill\"}</td>\n",
+       "      <td>shin</td>\n",
+       "      <td>chill</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "<p>2111 rows × 11 columns</p>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "                   trial_type  trial_index  time_elapsed internal_node_id  \\\n",
+       "0                    pavlovia            0             6          0.0-0.0   \n",
+       "1      html-keyboard-response            1         17039          0.0-1.0   \n",
+       "2      html-keyboard-response            2         35508          0.0-2.0   \n",
+       "3      html-keyboard-response            3         52132          0.0-3.0   \n",
+       "4      html-keyboard-response            4         54163          0.0-4.0   \n",
+       "...                       ...          ...           ...              ...   \n",
+       "2106  audio-keyboard-response         2106       4194953       0.0-2106.0   \n",
+       "2107              survey-text         2107       4196791       0.0-2107.0   \n",
+       "2108   html-keyboard-response         2108       4199312       0.0-2108.0   \n",
+       "2109  audio-keyboard-response         2109       4199623       0.0-2109.0   \n",
+       "2110              survey-text         2110       4201766       0.0-2110.0   \n",
+       "\n",
+       "          subject       rt                                           stimulus  \\\n",
+       "0     bzb5hmc2ggk      NaN                                                NaN   \n",
+       "1     bzb5hmc2ggk  17029.6  <p>Welcome to the experiment. In the first par...   \n",
+       "2     bzb5hmc2ggk  17952.0  <p>It is crucial that you pay attention to eac...   \n",
+       "3     bzb5hmc2ggk  16111.8  <p>You will need to listen carefully to each w...   \n",
+       "4     bzb5hmc2ggk      NaN                      <div id=\"countdown\">***</div>   \n",
+       "...           ...      ...                                                ...   \n",
+       "2106  bzb5hmc2ggk      NaN          perceptual_learning_stimuli/t2/r_team.wav   \n",
+       "2107  bzb5hmc2ggk   1834.0                                                NaN   \n",
+       "2108  bzb5hmc2ggk      NaN                      <div id=\"countdown\">***</div>   \n",
+       "2109  bzb5hmc2ggk      NaN          perceptual_learning_stimuli/t2/r_shin.wav   \n",
+       "2110  bzb5hmc2ggk   2139.8                                                NaN   \n",
+       "\n",
+       "      key_press       responses  word answer  \n",
+       "0           NaN             NaN   NaN    NaN  \n",
+       "1          32.0             NaN   NaN    NaN  \n",
+       "2          32.0             NaN   NaN    NaN  \n",
+       "3          32.0             NaN   NaN    NaN  \n",
+       "4           NaN             NaN   NaN    NaN  \n",
+       "...         ...             ...   ...    ...  \n",
+       "2106        NaN             NaN   NaN    NaN  \n",
+       "2107        NaN   {\"Q0\":\"team\"}  team   team  \n",
+       "2108        NaN             NaN   NaN    NaN  \n",
+       "2109        NaN             NaN   NaN    NaN  \n",
+       "2110        NaN  {\"Q0\":\"chill\"}  shin  chill  \n",
+       "\n",
+       "[2111 rows x 11 columns]"
+      ]
+     },
+     "execution_count": 27,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "8715ad09",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.8"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
