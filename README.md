@@ -23,28 +23,28 @@ import pandas as pd
     Learning Rate: Pretest - Posttest
  
 '''
-data = "Data/participant_data.csv"
+    data = "Data/participant_data.csv"
 '''
 
 Here we have preliminary data for four participants:
     2 Training, 2 Control
 
 '''
-df = pd.read_csv(data)
+    df = pd.read_csv(data)
 '''
 
 Get mean learning rate grouped by condition (Training or Control)
 
 '''
-means = df.groupby(['condition'])['learning rate'].mean()
+    means = df.groupby(['condition'])['learning rate'].mean()
 '''
 
 Create bar plot of mean learning rates by condition
 
 '''
-fig = means.plot(kind='bar', ylim=(0, .1),
-           xlabel="Working Memory Task", ylabel="Synthetic Speech Learning Rate",
-           title="Mean synthetic speech learning rates")
+    fig = means.plot(kind='bar', ylim=(0, .1),
+               xlabel="Working Memory Task", ylabel="Synthetic Speech Learning Rate",
+               title="Mean synthetic speech learning rates")
 '''
 
 ![png](Data/output.png)
